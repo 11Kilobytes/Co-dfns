@@ -25,7 +25,7 @@ CC←{
 		'COMPILE ERROR' ⎕SIGNAL 22
 	}⍵
 	'linux'≡ostype:⍺{
-		gcc ←'gcc -std=c17 -O2 -g -Wall -fPIC -shared'
+		gcc ←'clang -std=c17 -O2 -g -Wall -fPIC -shared'
 		gcc,←' -Wno-parentheses -Wno-misleading-indentation -Wno-unused-variable'
 		gcc,←' -Wno-incompatible-pointer-types -Wno-missing-braces'
 		gcc,←' -Wno-unused-but-set-variable'
