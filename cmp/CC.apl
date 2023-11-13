@@ -81,7 +81,8 @@ CX←{
 		gcc ←'gcc -std=c99 -Ofast -g -Wall -fPIC'
 		gcc,←' -Wno-parentheses -Wno-misleading-indentation -Wno-unused-variable'
 		gcc,←' -Wno-incompatible-pointer-types -Wno-missing-braces'
-		gcc,←' -Wno-unused-but-set-variable'
+
+		gcc,←' -Wno-unused-but-set-variable -fuse-ld=mold'
 		gcc,←' -L. -o ''',⍺,''' ''',⍺,'.c'' -lcodfns'
 		gcc,←' > ''',⍺,'.log'' 2>&1'
 		
