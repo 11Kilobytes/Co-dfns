@@ -53,7 +53,7 @@
   	gcc,←'  && gcc -std=c17 -O2 -g -Wall -fPIC -shared'
   	gcc,←'    -Wno-parentheses -Wno-misleading-indentation -Wno-unused-variable'
   	gcc,←'    -Wno-incompatible-pointer-types -Wno-missing-braces'
-  	gcc,←'    -Wno-unused-but-set-variable'
+  	gcc,←'    -Wno-unused-but-set-variable -fuse-ld=mold'
   	gcc,←'    -DNOMINMAX -DAF_DEBUG -DBUILD_CODFNS'
   	gcc,←'    -I''',AF∆PREFIX,'/include'' -L''',AF∆PREFIX,'/lib64'''
   	gcc,←'    -o libcodfns.so *.c -lm -laf',LIB
