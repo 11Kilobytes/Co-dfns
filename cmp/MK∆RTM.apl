@@ -5,19 +5,19 @@
   src←⊃⎕NGET path,'/rtm/prim.apln'
   echo←{⍺←⊢ ⋄ ⍺ ⍺⍺ ⍵⊣⍞←⍵⍵}
   data header←'prim'GC echo 'G' TT echo 'C' PS echo 'P' ⊢ src
-  (path,'/rtm/prim.c')put data
-  (path,'/rtm/prim.h')put header
+  ⍝ (path,'/rtm/prim.c')put data
+  ⍝ (path,'/rtm/prim.h')put header
   
-  codfns_h←⊃⎕NGET path,'/rtm/codfns.h.template'
-  codfns_h,←CR LF←⎕UCS 13 10
-  codfns_h,←'/* Runtime primitives */',CR LF
-  codfns_h,←'#ifndef BUILD_CODFNS',CR LF
-  codfns_h,←header
-  codfns_h,←CR LF
-  codfns_h,←'DECLSPEC struct cdf_prim_loc cdf_prim;',CR LF
-  codfns_h,←'#endif',CR LF
-  codfns_h,←CR LF
-  (path,'/rtm/codfns.h')put codfns_h
+  ⍝ codfns_h←⊃⎕NGET path,'/rtm/codfns.h.template'
+  ⍝ codfns_h,←CR LF←⎕UCS 13 10
+  ⍝ codfns_h,←'/* Runtime primitives */',CR LF
+  ⍝ codfns_h,←'#ifndef BUILD_CODFNS',CR LF
+  ⍝ codfns_h,←header
+  ⍝ codfns_h,←CR LF
+  ⍝ codfns_h,←'DECLSPEC struct cdf_prim_loc cdf_prim;',CR LF
+  ⍝ codfns_h,←'#endif',CR LF
+  ⍝ codfns_h,←CR LF
+  ⍝ (path,'/rtm/codfns.h')put codfns_h
   
   →opsys WINDOWS LINUX MAC
   
